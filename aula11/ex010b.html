@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;          
+        }
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="origem">País de origem:</label>
+    <input type="text" name="origem" id="origem">
+
+    <input type="button" value="Verificar" onclick="mostrarNacionalidade()">
+
+    <div id="res">Resultado</div>
+
+    <script>
+        function mostrarNacionalidade() {
+            var país = document.querySelector('input#origem').value
+            var resultado = document.querySelector('div#res')
+            resultado.innerHTML = `<p>Seu país de origem é <strong>${país}</strong>.</p>`
+            if (país == 'Brasil') {
+                resultado.innerHTML += '<p>Portanto, você é <strong>brasileiro</strong>.</p>'
+            } else {
+                resultado.innerHTML += '<p>Portanto, você é <strong>estrangeiro</strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>
