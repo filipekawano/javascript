@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+        }
+        header > h1 {
+            text-align: center;
+            color: white;
+        }
+        main {
+            background-color: white;
+            margin: auto;
+            width: 85%;
+            max-width: 500px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.548);
+        }
+        main > p {
+            text-align: center;
+            padding: 15px 0px;
+        }
+        main > div#paisagem > img {
+            display: block;
+            width: 210px;
+            height: 210px;
+            margin: auto;
+            border-radius: 50%;
+        }
+        footer > p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <main>
+        <p id="hora">Agora são x horas.</p>
+        <div id="paisagem">
+            <!-- Imagem de paisagem -->
+        </div>
+    </main>
+    <footer>
+        <p><em>© CursoemVideo</em></p>
+    </footer>
+    
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var txthora = document.querySelector('p#hora')
+        var imagem = document.querySelector('div#paisagem')
+
+        txthora.innerHTML = `Agora são ${hora} horas.`
+        if (hora >= 5 && hora < 12) {
+            imagem.innerHTML = '<img src="imagens/morning.jpg" alt="manhã">'
+            document.body.style.background = 'rgb(223, 190, 119)'
+        } else if (hora >= 12 && hora <= 18) {
+            imagem.innerHTML = '<img src="imagens/afternoon.jpg" alt="tarde">'
+            document.body.style.background = 'rgb(192, 138, 102)'
+        } else {
+            imagem.innerHTML = '<img src="imagens/night.jpg" alt="noite">'
+            document.body.style.background = 'rgb(54, 52, 50)'
+        }
+    </script>
+</body>
+</html>
