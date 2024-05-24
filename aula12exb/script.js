@@ -5,17 +5,18 @@ checagem.addEventListener('click', mostrarResultado)
 
 //Abaixo está a função quando o usuário clicar no botão "Verificar"
 function mostrarResultado() {
-    var anoNasc = document.querySelector('input#ano').value
+    var anoNasc = Number(document.querySelector('input#ano').value)
     var idade = anoAtual - anoNasc
     var sexMasc = document.getElementById('sexMas')
     var sexFem = document.getElementById('sexFem')
+    res.style.textAlign = 'center'
 
-    //Botão "Limpar" vira uma seta pra baixo
+    //Botão "Limpar" vira uma seta pra baixo (opcional)
     var botao = document.querySelector("input[type='reset']")
     botao.style.backgroundColor = "rgb(57, 131, 216)"
     botao.style.color = "white"
     botao.value = "↓"
-
+    
     if (anoNasc > anoAtual || anoNasc < 1900) {
         window.alert('[ERRO] Verifique os dados e tente novamente!')
     } else if (sexMasc.checked) {
