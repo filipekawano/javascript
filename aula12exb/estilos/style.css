@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: rgb(57, 131, 216);
+}
+
+header > h1, footer > p {
+    text-align: center;
+    color: white;
+    margin: 25px 0px;
+}
+
+main {
+    width: 80%;
+    max-width: 500px;
+    padding: 5px 15px;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.562);
+}
+
+main div {
+    margin: 20px 0px;
+}
+input {
+    font-size: 18px;
+}
+div#check > input {
+    width: 75px;
+    float: left;
+    margin-right: 15px;
+}
+div#reset > input {
+    width: 75px;
+}
+div#sex > legend {
+    float: left;
+    margin-right: 15px;
+}
+div#sex > label {
+    margin-right: 20px;
+}
+div#year > input {
+    width: 150px;
+}
+div#result img {
+    display: block;
+    margin: auto;
+    padding-top: 15px;
+    border-radius: 50%;
+}
