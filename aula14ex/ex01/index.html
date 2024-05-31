@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Repetição Nº1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <form action="cadastro.php" method="get">
+            <div>
+                <label for="inicio">Início:</label>
+                <input type="number" name="inicio" id="inicio">
+            </div>
+            <div>
+                <label for="fim">Fim:</label>
+                <input type="number" name="fim" id="fim">
+            </div>
+            <div>
+                <label for="passo">Passo:</label>
+                <input type="number" name="passo" id="passo">
+            </div>
+            <div id="botao">
+                <input type="button" value="Contar">
+            </div>
+            <div id="result">Preparando a contagem...</div>
+        </form>
+    </main>
+    <footer>
+        <p><em>&copy; CursoemVideo</em></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
