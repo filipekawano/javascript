@@ -42,6 +42,9 @@ div#select {
     display: block;
     margin-bottom: -15px;
 }
+select#result {
+    width: 150px;
+}
 p {
     padding: 5px 0px;
 }
